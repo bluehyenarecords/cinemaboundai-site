@@ -113,3 +113,31 @@ p {
     border: 2px solid #8b6508; /* Adds a dark gold outline */
     box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Shadow on the ground */
 }
+.gallery {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #0a0a0a;
+}
+
+.gallery h2 {
+    color: #FFD700; /* Gold Title */
+    margin-bottom: 30px;
+}
+
+.poster-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.poster-card img {
+    width: 300px; /* Adjust size here */
+    border-radius: 10px;
+    border: 2px solid #333;
+    transition: 0.3s;
+}
+
+.poster-card img:hover {
+    border-color: #ff0055; /* Glows red when you touch it */
+    transform: scale(1.02);
+}
