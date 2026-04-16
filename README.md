@@ -32,11 +32,8 @@ Cinemabound is an AI‑driven storytelling tool that transforms any book into a 
 4. A short cinematic video is generated  
 5. Download or share instantly
 
----
 
-## 📄 License
 
-MIT License
 
 ---
 
