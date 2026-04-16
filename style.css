@@ -7,7 +7,6 @@ body {
 .hero {
     text-align: center;
     padding: 120px 20px;
-
     background:
         linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
         url("images/izoca-prague-980732.jpg");
@@ -15,6 +14,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
 }
 
 
