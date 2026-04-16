@@ -1,61 +1,102 @@
-/* 1. General Setup */
+/* 1. The Background */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f0f0f; /* Deep black background */
+    background-color: #0f0f0f;
     color: white;
-}
-
-/* 2. The Header/Hero Section */
-header {
-    height: 60vh; /* Takes up 60% of the screen height */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-family: sans-serif;
+    margin: 0;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-image-here.jpg');
-    background-size: cover;
-    border-bottom: 3px solid #ff0055; /* Vibrant pink accent */
 }
 
-/* 1. The Glowing Title */
-header h1 {
+/* 2. The Header Area */
+header {
+    padding: 100px 20px;
+}
+
+/* 1. The Outlined & Glowing Title */
+h1 {
+    color: #ff0055; /* The inside color (Red/Pink) */
     font-size: 4rem;
     margin: 0;
-    color: #ff0055;
-    /* This adds the glow effect around the letters */
-    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 30px #ff0055;
-    letter-spacing: 2px;
+    
+    /* This creates the Black Outline */
+    -webkit-text-stroke: 2px black; 
+    
+    /* This creates the Red Glow */
+    text-shadow: 
+        0 0 10px #ff0055, 
+        0 0 20px #ff0055, 
+        0 0 30px #ff0055;
+    
+    text-transform: uppercase; /* Makes it look more like a movie title */
 }
 
-/* 4. The Sub-headline */
-header p {
-    font-size: 1.5rem;
-    color: #cccccc;
-    margin-top: 10px;
-    margin-bottom: 30px;
+}
+
+/* 1. The Outlined & Glowing Title */
+h1 {
+    color: #ff0055; /* The inside color (Red/Pink) */
+    font-size: 4rem;
+    margin: 0;
+    
+    /* This creates the Black Outline */
+    -webkit-text-stroke: 2px black; 
+    
+    /* This creates the Red Glow */
+    text-shadow: 
+        0 0 10px #ff0055, 
+        0 0 20px #ff0055, 
+        0 0 30px #ff0055;
+    
+    text-transform: uppercase; /* Makes it look more like a movie title */
 }
 
 /* 2. The Shaded Oval Button */
 .launch-btn {
-    background: linear-gradient(180deg, #FFD700 0%, #b8860b 100%); /* This creates the "shaded" gradient look */
+    display: inline-block;
+    margin-top: 20px;
+    
+    /* The Gold Shading */
+    background: linear-gradient(180deg, #FFD700 0%, #b8860b 100%); 
+    
     color: black;
-    padding: 15px 50px;       /* Widening the padding makes it more "oval" */
+    padding: 15px 60px;       /* Wide padding makes the oval */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
-    border-radius: 100px;     /* This creates the perfect oval shape */
-    display: inline-block;
     
-    /* This adds a 3D shadow effect underneath */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(0,0,0,0.3);
+    /* This MUST be a high number for the oval shape */
+    border-radius: 100px;     
     
-    transition: transform 0.2s;
+    /* The shading/3D effect */
+    border: 1px solid #8b6508;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.5); 
+    
+    transition: all 0.3s ease;
 }
 
 .launch-btn:hover {
-    transform: translateY(-3px); /* Makes it look like it's being pressed less */
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(255, 215, 0, 0.3);
+}
+}
+}
+
+/* 4. The Sub-headline */
+p {
+    color: #cccccc;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* 5. THE OVAL BUTTON (The Shaded One) */
+.launch-btn {
+    display: inline-block;
+    background: linear-gradient(180deg, #FFD700 0%, #b8860b 100%); /* Shading */
+    color: black;
+    padding: 15px 60px;       /* Extra wide for the oval look */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 100px;     /* Forces it into an oval */
+    border: 2px solid #8b6508; /* Adds a dark gold outline */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Shadow on the ground */
 }
