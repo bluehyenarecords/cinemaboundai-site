@@ -20,11 +20,13 @@ header {
     border-bottom: 3px solid #ff0055; /* Vibrant pink accent */
 }
 
-/* 3. The Title */
+/* 1. The Glowing Title */
 header h1 {
     font-size: 4rem;
     margin: 0;
     color: #ff0055;
+    /* This adds the glow effect around the letters */
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 30px #ff0055;
     letter-spacing: 2px;
 }
 
@@ -36,19 +38,24 @@ header p {
     margin-bottom: 30px;
 }
 
-/* 5. The Gold Launch Button */
+/* 2. The Shaded Oval Button */
 .launch-btn {
-    background-color: #FFD700; /* Gold */
+    background: linear-gradient(180deg, #FFD700 0%, #b8860b 100%); /* This creates the "shaded" gradient look */
     color: black;
-    padding: 15px 40px;
+    padding: 15px 50px;       /* Widening the padding makes it more "oval" */
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
-    border-radius: 50px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-radius: 100px;     /* This creates the perfect oval shape */
+    display: inline-block;
+    
+    /* This adds a 3D shadow effect underneath */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 -2px 5px rgba(0,0,0,0.3);
+    
+    transition: transform 0.2s;
 }
 
 .launch-btn:hover {
-    transform: scale(1.1); /* Makes button slightly bigger when hovered */
-    box-shadow: 0 0 20px #FFD700;
+    transform: translateY(-3px); /* Makes it look like it's being pressed less */
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
