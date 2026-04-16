@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemabound – Turn Books Into Short Videos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Cinemabound</h1>
+            <p class="tagline">Turn Books Into Short, Cinematic Videos</p>
+            <a href="#" class="cta-btn">Launch App</a>
+        </div>
+    </header>
+
+    <!-- FEATURES SECTION -->
+    <section class="features">
+        <h2>What Cinemabound Does</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <h3>📘 Upload Any Book</h3>
+                <p>Cinemabound analyzes your story, characters, and key moments.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>🎬 Auto‑Generate Scenes</h3>
+                <p>AI extracts cinematic beats and builds a visual sequence.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>⚡ Fast Video Output</h3>
+                <p>Get a short, share‑ready video in minutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <h2>Ready to Transform Your Story?</h2>
+        <a href="#" class="cta-btn large">Start Creating</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Cinemabound. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+/* BRAND COLORS */
+:root {
+    --black: #000000;
+    --charcoal: #0A0A0A;
+    --blue: #00C8FF;
+    --gold: #FFD700;
+    --white: #FFFFFF;
+    --gray: #CCCCCC;
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--black);
+    color: var(--gray);
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), var(--black)),
+                url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: var(--white);
+    text-shadow: 0 0 20px var(--blue);
+}
+
+.tagline {
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-top: -10px;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS */
+.cta-btn {
+    background: var(--blue);
+    color: var(--black);
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background: var(--gold);
+    color: var(--black);
+}
+
+.large {
+    padding: 18px 36px;
+    font-size: 1.2rem;
+}
+
+/* FEATURES */
+.features {
+    padding: 80px 10%;
+    background-color: var(--charcoal);
+    text-align: center;
+}
+
+.features h2 {
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.feature-box {
+    background: #111;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.feature-box:hover {
+    border-color: var(--blue);
+    box-shadow: 0 0 15px rgba(0,200,255,0.3);
+}
+
+.feature-box h3 {
+    color: var(--blue);
+}
+
+/* CTA SECTION */
+.cta-section {
+    padding: 100px 10%;
+    text-align: center;
+    background: var(--black);
+}
+
+.cta-section h2 {
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--charcoal);
+    color: var(--gray);
+}
