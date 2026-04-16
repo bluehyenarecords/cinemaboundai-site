@@ -1,4 +1,4 @@
-/* 1. The Background */
+/* 1. The Background & Body */
 body {
     background-color: #0f0f0f;
     color: white;
@@ -7,16 +7,13 @@ body {
     text-align: center;
 }
 
+/* 2. The Header with Prague Background */
 header {
-    /* This connects your image */
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('izoca-prague-980732.jpg');
-    
-    /* This makes the image cover the whole header without stretching */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* This creates a cool parallax moving effect */
-    
-    height: 80vh; /* Makes the header nice and tall */
+    background-attachment: fixed;
+    height: 80vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,73 +22,14 @@ header {
     border-bottom: 3px solid #ff0055;
 }
 
-/* 1. The Outlined & Glowing Title */
+/* 3. The Outlined & Glowing Title */
 h1 {
-    color: #ff0055; /* The inside color (Red/Pink) */
+    color: #ff0055; 
     font-size: 4rem;
     margin: 0;
-    
-    /* This creates the Black Outline */
     -webkit-text-stroke: 2px black; 
-    
-    /* This creates the Red Glow */
-    text-shadow: 
-        0 0 10px #ff0055, 
-        0 0 20px #ff0055, 
-        0 0 30px #ff0055;
-    
-    text-transform: uppercase; /* Makes it look more like a movie title */
-}
-
-}
-
-/* 1. The Outlined & Glowing Title */
-h1 {
-    color: #ff0055; /* The inside color (Red/Pink) */
-    font-size: 4rem;
-    margin: 0;
-    
-    /* This creates the Black Outline */
-    -webkit-text-stroke: 2px black; 
-    
-    /* This creates the Red Glow */
-    text-shadow: 
-        0 0 10px #ff0055, 
-        0 0 20px #ff0055, 
-        0 0 30px #ff0055;
-    
-    text-transform: uppercase; /* Makes it look more like a movie title */
-}
-
-/* 2. The Shaded Oval Button */
-.launch-btn {
-    display: inline-block;
-    margin-top: 20px;
-    
-    /* 1. The Colors & Shading */
-    background: linear-gradient(180deg, #FFD700 0%, #b8860b 100%); 
-    color: black;
-    
-    /* 2. The Shape (This makes it an oval) */
-    padding: 15px 60px;       /* 15px top/bottom, 60px left/right */
-    border-radius: 100px;     /* This rounds the corners completely */
-    
-    /* 3. The Look & Feel */
-    text-decoration: none;    /* Removes the underline */
-    font-weight: bold;
-    font-size: 1.2rem;
-    border: 1px solid #8b6508; /* Dark gold edge */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* 3D shadow */
-    
-    transition: transform 0.2s; /* Makes it move smoothly when clicked */
-}
-
-/* This makes the button "pop" when you hover over it */
-.launch-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
-}
-
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 30px #ff0055;
+    text-transform: uppercase;
 }
 
 /* 4. The Sub-headline */
@@ -101,18 +39,27 @@ p {
     margin-bottom: 40px;
 }
 
-/* 5. THE OVAL BUTTON (The Shaded One) */
+/* 5. The Shaded Oval Button */
 .launch-btn {
     display: inline-block;
-    background: linear-gradient(180deg, #FFD700 0%, #b8860b 100%); /* Shading */
+    background: linear-gradient(180deg, #FFD700 0%, #b8860b 100%); 
     color: black;
-    padding: 15px 60px;       /* Extra wide for the oval look */
+    padding: 15px 60px;
+    border-radius: 100px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 100px;     /* Forces it into an oval */
-    border: 2px solid #8b6508; /* Adds a dark gold outline */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Shadow on the ground */
+    font-size: 1.2rem;
+    border: 1px solid #8b6508;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: transform 0.2s;
 }
+
+.launch-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+}
+
+/* 6. The Gallery Section */
 .gallery {
     padding: 50px 20px;
     text-align: center;
@@ -120,7 +67,7 @@ p {
 }
 
 .gallery h2 {
-    color: #FFD700; /* Gold Title */
+    color: #FFD700;
     margin-bottom: 30px;
 }
 
@@ -131,13 +78,13 @@ p {
 }
 
 .poster-card img {
-    width: 300px; /* Adjust size here */
+    width: 300px;
     border-radius: 10px;
     border: 2px solid #333;
     transition: 0.3s;
 }
 
 .poster-card img:hover {
-    border-color: #ff0055; /* Glows red when you touch it */
+    border-color: #ff0055;
     transform: scale(1.02);
 }
