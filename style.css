@@ -68,30 +68,30 @@ h1 {
     display: inline-block;
     margin-top: 20px;
     
-    /* The Gold Shading */
+    /* 1. The Colors & Shading */
     background: linear-gradient(180deg, #FFD700 0%, #b8860b 100%); 
-    
     color: black;
-    padding: 15px 60px;       /* Wide padding makes the oval */
-    text-decoration: none;
+    
+    /* 2. The Shape (This makes it an oval) */
+    padding: 15px 60px;       /* 15px top/bottom, 60px left/right */
+    border-radius: 100px;     /* This rounds the corners completely */
+    
+    /* 3. The Look & Feel */
+    text-decoration: none;    /* Removes the underline */
     font-weight: bold;
     font-size: 1.2rem;
+    border: 1px solid #8b6508; /* Dark gold edge */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4); /* 3D shadow */
     
-    /* This MUST be a high number for the oval shape */
-    border-radius: 100px;     
-    
-    /* The shading/3D effect */
-    border: 1px solid #8b6508;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.5); 
-    
-    transition: all 0.3s ease;
+    transition: transform 0.2s; /* Makes it move smoothly when clicked */
 }
 
+/* This makes the button "pop" when you hover over it */
 .launch-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 20px rgba(255, 215, 0, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
 }
-}
+
 }
 
 /* 4. The Sub-headline */
