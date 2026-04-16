@@ -244,20 +244,42 @@ footer {
     font-size: 14px;
     letter-spacing: 0.5px;
 }
-/* This section controls the header bar at the top */
+/* This centers everything in your header */
 header {
-  background-color: #1a1a1a; /* A sleek dark background */
-  padding: 20px;             /* Gives the content some breathing room */
-  display: flex;             /* This aligns your logo and links in a row */
-  justify-content: space-between; 
-  align-items: center;
-  border-bottom: 3px solid #ff0055; /* That vibrant neon line we talked about */
+    background-color: #121212; /* Dark cinematic background */
+    padding: 80px 20px;        /* Adds space at the top and bottom */
+    text-align: center;        /* Centers all the text and the button */
+    border-bottom: 2px solid #333;
 }
 
-/* This makes the links inside your header look pretty */
-header a {
-  color: white;              /* Makes text white */
-  text-decoration: none;     /* Removes the ugly underline */
-  font-weight: bold;         /* Makes the text pop */
-  margin-left: 20px;         /* Puts space between the links */
+/* Style for the Main Title */
+header h1 {
+    color: #ff0055;            /* Vibrant Pink/Red */
+    font-size: 3rem;           /* Makes it big */
+    margin-bottom: 10px;       /* Space below the title */
+}
+
+/* Style for the "Turn Books Into..." text */
+header p {
+    color: #cccccc;            /* Soft grey text */
+    font-size: 1.2rem;
+    margin-bottom: 30px;       /* Space above the button */
+}
+
+/* Style for the Gold Launch Button */
+.launch-btn {
+    background-color: #FFD700; /* Gold Color */
+    color: #000;               /* Black text so it's readable */
+    padding: 15px 30px;        /* Makes the button chunky and clickable */
+    text-decoration: none;     /* Removes underline */
+    font-weight: bold;
+    border-radius: 50px;       /* Makes the edges rounded */
+    display: inline-block;     /* Ensures it behaves like a button */
+    transition: 0.3s;          /* Makes it glow smoothly when hovered */
+}
+
+/* Makes the button change slightly when you hover your mouse over it */
+.launch-btn:hover {
+    background-color: #ffed8a; /* Lighter gold */
+    box-shadow: 0 0 15px #FFD700; /* Subtle gold glow */
 }
