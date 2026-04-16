@@ -1,285 +1,54 @@
+/* 1. General Setup */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-}
-/* HERO SECTION */
-.hero {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    background:
-        url("images/izoca-prague-980732.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    box-shadow: inset 0 0 200px rgba(0,0,0,0.8);
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f0f0f; /* Deep black background */
+    color: white;
 }
 
-/* Cinematic overlay */
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.4),
-        rgba(0,0,0,0.85)
-    );
-    z-index: 1;
-}
-
-/* Hero content */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    animation: fadeIn 1.5s ease-out forwards;
-    opacity: 0;
-    
-/* Tagline */
-.hero-tagline {
-    font-size: 24px;
-    color: #E8DCC4;
-    margin-bottom: 30px;
-}
-
-.hero h1 {
-    font-size: 64px;
-    color: #F5E9D3;
-    margin-bottom: 10px;
-    text-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
-}
-
-.hero h1::after {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 4px;
-    background: #FFD700;
-    margin: 20px auto 0;
-    border-radius: 2px;
-}
-
-.tagline {
-    font-size: 22px;
-    color: #E8DCC4;
-    margin-bottom: 30px;
-}
-/* Button */
-.cta-button {
-    background: #FFD700;
-    color: #1E1612;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s ease;
-}
-/* CTA Button */
-.cta-button {
-    background: #FFD700;
-    color: #1E1612;
-    padding: 14px 32px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s ease;
-}
-
-.cta-button:hover {
-    background: #F5E9D3;
-    transform: translateY(-3px);
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-
-.tagline {
-    font-size: 1.5rem;
-    color: #ffd700;
-    margin-bottom: 30px;
-}
-
-.cta {
-    background: #00c8ff;
-    padding: 15px 30px;
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-.features {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.features h2 {
-    font-size: 36px;
-    color: #F5E9D3;
-    margin-bottom: 50px;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-}
-
-.feature {
-    background: rgba(255,255,255,0.05);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(4px);
-    transition: 0.3s ease;
-}
-
-.feature:hover {
-    transform: translateY(-6px);
-    border-color: #FFD700;
-}
-
-}
-.feature {
-    width: 280px;
-    background: #111;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #222;
-}
-/* Global Styles */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #1E1612; /* deep cinematic brown */
-  color: #F5E9D3; /* warm cream */
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-}
-
-/* Header / Hero */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
-  background: linear-gradient(180deg, #3B2F2F 0%, #1E1612 100%);
-}
-
-.hero h1 {
-  font-size: 3rem;
-  color: #D4AF37; /* gold */
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto 40px;
-  color: #F5E9D3;
-}
-
-.launch-button {
-  background-color: #D4AF37;
-  color: #1E1612;
-  padding: 14px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-  transition: 0.25s;
-}
-
-.launch-button:hover {
-  background-color: #C9A227;
-}
-
-/* Section Styles */
-.section {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 40px;
-  background-color: #2A1F1A;
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(0,0,0,0.4);
-}
-
-.section h2 {
-  color: #D4AF37;
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.section p {
-  color: #F5E9D3;
-  font-size: 1.1rem;
-}
-
-/* Feature Icons (future images) */
-.feature-image {
-  width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(0,0,0,0.5);
-}
-
-footer {
-    padding: 40px 20px;
-    background: linear-gradient(180deg, #1E1612 0%, #0D0A08 100%);
-    text-align: center;
-    color: #F5E9D3;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-}
-/* This centers everything in your header */
+/* 2. The Header/Hero Section */
 header {
-    background-color: #121212; /* Dark cinematic background */
-    padding: 80px 20px;        /* Adds space at the top and bottom */
-    text-align: center;        /* Centers all the text and the button */
-    border-bottom: 2px solid #333;
+    height: 60vh; /* Takes up 60% of the screen height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('your-image-here.jpg');
+    background-size: cover;
+    border-bottom: 3px solid #ff0055; /* Vibrant pink accent */
 }
 
-/* Style for the Main Title */
+/* 3. The Title */
 header h1 {
-    color: #ff0055;            /* Vibrant Pink/Red */
-    font-size: 3rem;           /* Makes it big */
-    margin-bottom: 10px;       /* Space below the title */
+    font-size: 4rem;
+    margin: 0;
+    color: #ff0055;
+    letter-spacing: 2px;
 }
 
-/* Style for the "Turn Books Into..." text */
+/* 4. The Sub-headline */
 header p {
-    color: #cccccc;            /* Soft grey text */
-    font-size: 1.2rem;
-    margin-bottom: 30px;       /* Space above the button */
+    font-size: 1.5rem;
+    color: #cccccc;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
-/* Style for the Gold Launch Button */
+/* 5. The Gold Launch Button */
 .launch-btn {
-    background-color: #FFD700; /* Gold Color */
-    color: #000;               /* Black text so it's readable */
-    padding: 15px 30px;        /* Makes the button chunky and clickable */
-    text-decoration: none;     /* Removes underline */
+    background-color: #FFD700; /* Gold */
+    color: black;
+    padding: 15px 40px;
+    text-decoration: none;
     font-weight: bold;
-    border-radius: 50px;       /* Makes the edges rounded */
-    display: inline-block;     /* Ensures it behaves like a button */
-    transition: 0.3s;          /* Makes it glow smoothly when hovered */
+    font-size: 1.2rem;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Makes the button change slightly when you hover your mouse over it */
 .launch-btn:hover {
-    background-color: #ffed8a; /* Lighter gold */
-    box-shadow: 0 0 15px #FFD700; /* Subtle gold glow */
+    transform: scale(1.1); /* Makes button slightly bigger when hovered */
+    box-shadow: 0 0 20px #FFD700;
 }
