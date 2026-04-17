@@ -1,123 +1,209 @@
-/* 1. RESET & BASICS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* GLOBAL */
 body {
-    background-color: #050505; /* Deep space black */
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow-x: hidden;
-    /* 1. THE STAGE */
-body, html {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #050505;
-    color: white;
-    font-family: 'Jumble', Georgia; /* Classic Book/Movie Font */
-}
+    font-family: Inter, sans-serif;
+    background: #0D0A08;
+    color: #F5E9D3;
 }
 
-/* 2. THE CINEMATIC HERO SECTION */
-.hero {
-    /* ... existing code ... */
-    overflow: hidden;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Dramatic Theater Image */
-    background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* This adds the "Dramatic/Futuristic" tint over the image */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(20, 0, 40, 0.6));
-    z-index: 1;
-}
-
-.content {
-    position: relative;
-    z-index: 2;
+h2 {
     text-align: center;
-}
-
-/* 3. THE RED GLOWING TITLE */
-.main-title {
-    /* ... existing code ... */
-    position: relative;
-    /* This adds a "Whimsical" light flare behind the text */
-.main-title::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-    height: 200px;
-    background: radial-gradient(circle, rgba(255, 0, 85, 0.4) 0%, transparent 70%);
-    z-index: -1;
-    filter: blur(20px);
-    font-size: 5rem;
-    letter-spacing: 15px;
-    text-transform: uppercase;
-    color: #ff0055;
-    /* The Black Outline */
-    -webkit-text-stroke: 2px black;
-    /* The Futuristic Glow */
-    text-shadow: 
-        0 0 10px #ff0055,
-        0 0 30px #ff0055,
-        0 0 60px rgba(0, 255, 255, 0.4); /* Subtle Cyan glow for future feel */
-    margin-bottom: 10px;
-}
-
-.tagline {
-    font-size: 1.5rem;
-    color: #cccccc;
-    letter-spacing: 5px;
+    font-size: 36px;
     margin-bottom: 40px;
 }
 
-/* 4. THE FUTURISTIC BUTTON */
-.btn-glow {
-    display: inline-block;
-    padding: 18px 50px;
-    color: white;
+/* NAVIGATION */
+.top-nav {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #F5E9D3;
     text-decoration: none;
+}
+
+.nav-cta {
+    background: #FFD700;
+    color: #1E1612;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("images/izoca-prague-980732.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.1);
+    padding: 6px 14px;
+    border-radius: 20px;
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 56px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 25px rgba(255,215,0,0.4);
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #E8DCC4;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-primary {
+    background: #FFD700;
+    color: #1E1612;
+    padding: 14px 28px;
+    border-radius: 8px;
     font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-
-    /* The Futuristic "Glass" look */
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px); /* Blurs the theater behind the button */
-    
-    border: 1px solid rgba(255, 0, 85, 0.5);
-    border-radius: 100px; /* Force the Oval */
-    
-    box-shadow: 0 0 20px rgba(255, 0, 85, 0.2);
-    transition: all 0.4s ease;
+    text-decoration: none;
 }
 
-.btn-glow:hover {
-    background: #ff0055;
-    color: white;
-    box-shadow: 0 0 40px #ff0055;
-    transform: translateY(-3px);
+.cta-secondary {
+    background: rgba(255,255,255,0.1);
+    color: #F5E9D3;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
 }
+
+.hero-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #CFC6B4;
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+    padding: 100px 20px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* APP PREVIEW */
+.app-preview {
+    padding: 100px 20px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.project-thumb {
+    height: 160px;
+    background-size: cover;
+    background-position: center;
+}
+
+.cinematic { background-image: url("images/izoca-prague-980732.jpg"); }
+.noir { background: #1E1E1E; }
+.storybook { background: #3A2A1A; }
+
+.project-info {
+    padding: 20px;
+}
+
+/* FEATURES */
+.features {
+    padding: 100px 20px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.feature {
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* CTA SECTION */
+.cta-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.cta-section .large {
+    padding: 18px 40px;
+    font-size: 20px;
+}
+
+/* FOOTER */
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: #0A0806;
+    color: #CFC6B4;
 }
