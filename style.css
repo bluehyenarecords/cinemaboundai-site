@@ -10,6 +10,15 @@ body {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-x: hidden;
+    /* 1. THE STAGE */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #050505;
+    color: white;
+    font-family: 'Jumble', Georgia; /* Classic Book/Movie Font */
+}
 }
 
 /* 2. THE CINEMATIC HERO SECTION */
