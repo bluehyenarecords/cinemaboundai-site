@@ -1,210 +1,112 @@
-/* GLOBAL */
-body {
+/* 1. THE FOUNDATION */
+* {
     margin: 0;
-    font-family: Inter, sans-serif;
-    background: #0D0A08;
-    color: #F5E9D3;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h2 {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
+body {
+    background-color: #050505; /* True Black */
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    overflow-x: hidden;
 }
 
-/* NAVIGATION */
-.top-nav {
-    position: absolute;
-    top: 20px;
+/* 2. THE HERO (THE STAGE) */
+.hero-section {
+    position: relative;
+    height: 100vh;
     width: 100%;
-    padding: 0 40px;
+    /* Blurry Theater Background */
+    background: linear-gradient(180deg, rgba(5,5,5,0.7) 0%, rgba(5,5,5,1) 100%), 
+                url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 3. MODERN NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 30px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
 }
 
 .logo {
-    font-size: 26px;
-    font-weight: 700;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.nav-actions {
-    display: flex;
-    gap: 20px;
+.logo span {
+    color: #ff0055; /* Neon Red */
 }
 
-.nav-link {
-    color: #F5E9D3;
+.nav-links a {
+    color: #aaa;
     text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 
-.nav-cta {
-    background: #FFD700;
-    color: #1E1612;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-}
+.nav-links a:hover { color: #ff0055; }
 
-/* HERO */
-.hero {
-    position: relative;
-    height: 100vh;
-    background: url("images/izoca-prague-980732.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.85));
-}
-
+/* 4. THE CONTENT (MOVED TO TOP) */
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
+    margin-top: 50px; /* Pushes it toward the top */
+    text-align: center;
 }
 
-.hero-tag {
+.main-title {
+    font-family: 'Times New Roman', serif;
+    font-size: 5rem;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    color: #ff0055;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 0 0 30px rgba(255, 0, 85, 0.6);
+    margin-bottom: 0px;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* 5. THE LAUNCH BUTTON (GOLDEN OVAL) */
+.button-container {
+    margin-top: 60px;
+}
+
+.launch-btn {
     display: inline-block;
-    background: rgba(255,255,255,0.1);
-    padding: 6px 14px;
-    border-radius: 20px;
-    color: #FFD700;
-    margin-bottom: 20px;
-}
-
-.hero-title {
-    font-size: 56px;
-    margin-bottom: 20px;
-    text-shadow: 0 0 25px rgba(255,215,0,0.4);
-}
-
-.hero-subtitle {
-    font-size: 20px;
-    color: #E8DCC4;
-    margin-bottom: 30px;
-}
-
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.cta-primary {
-    background: #FFD700;
-    color: #1E1612;
-    padding: 14px 28px;
-    border-radius: 8px;
+    padding: 18px 60px;
+    background-color: #ff0055;
+    color: white;
+    text-decoration: none;
     font-weight: bold;
-    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 100px; /* Perfect Oval */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 10px 40px rgba(255, 0, 85, 0.5);
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.cta-secondary {
-    background: rgba(255,255,255,0.1);
-    color: #F5E9D3;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-}
-
-.hero-note {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #CFC6B4;
-}
-
-/* HOW IT WORKS */
-.how-it-works {
-    padding: 100px 20px;
-}
-
-.steps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.step-card {
-    background: rgba(255,255,255,0.05);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
-/* APP PREVIEW */
-.app-preview {
-    padding: 100px 20px;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    background: rgba(255,255,255,0.05);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
-.project-thumb {
-    height: 160px;
-    background-size: cover;
-    background-position: center;
-}
-
-.cinematic { background-image: url("images/izoca-prague-980732.jpg"); }
-.noir { background: #1E1E1E; }
-.storybook { background: #3A2A1A; }
-
-.project-info {
-    padding: 20px;
-}
-
-/* FEATURES */
-.features {
-    padding: 100px 20px;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.feature {
-    background: rgba(255,255,255,0.05);
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.08);
-}
-
-/* CTA SECTION */
-.cta-section {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.cta-section .large {
-    padding: 18px 40px;
-    font-size: 20px;
-}
-
-/* FOOTER */
-footer {
-    padding: 40px 20px;
-    text-align: center;
-    background: #0A0806;
-    color: #CFC6B4;
+.launch-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    background-color: #ff1a66;
+    box-shadow: 0 15px 50px #ff0055;
 }
 
